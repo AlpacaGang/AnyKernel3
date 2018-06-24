@@ -228,6 +228,13 @@ do_devicecheck() {
   if [ ! "$match" ]; then
     abort " " "Unsupported device. Aborting...";
   fi;
+  if [ "$(file_getprop /system/build.prop ro.treble.enabled)" == "true" ]; then
+    dtb=/tmp/anykernel/treble;
+	ui_print "Treble ROM detected!";
+  else
+    dtb=/tmp/anykernel/nontreble;
+	ui_print "Non-treble ROM detected!";
+  fi;
 }
 int2ver() {
   if $BB [ "$1" -eq "$1" ] 2>/dev/null; then
@@ -423,8 +430,12 @@ do_levelcheck;
 ui_print "Installing...";
 CORE=$($BB grep -oE 'ak.*core.sh' anykernel.sh);
 test -f tools/$CORE || $BB ln -s $AKHOME/tools/ak*-core.sh $AKHOME/tools/$CORE;
-PATH="$AKHOME/bin:$PATH" home=$AKHOME $BB ash anykernel.sh $2;
-if [ $? != 0 ]; then
+cat /tmp/anykernel/kernel/Image.gz $dtb/*.dtb > /tmp/anykernel/Image.gz-dtb;
+if [ $? != "0" ]; then
+  abort "DTB append failed. Aborting...";
+fi;
+PATH="/tmp/anykernel/bin:$PATH" $bb ash /tmp/anykernel/anykernel.sh $2;
+if [ $? != "0" ]; then
   abort;
 fi;
 
