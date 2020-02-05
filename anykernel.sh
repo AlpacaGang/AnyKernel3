@@ -37,7 +37,6 @@ mkdir /data/adb;
 mkdir /data/adb/service.d;
 fi;
 
-replace_file /data/adb/service.d/init.qcom.post_boot.sh 0777 init.qcom.post_boot.sh;
 if [ -d $ramdisk/.backup ]; then
   ui_print " "; ui_print "Magisk detected! Reflashing Magisk is not necessary...";
   patch_cmdline "skip_override" "skip_override";
