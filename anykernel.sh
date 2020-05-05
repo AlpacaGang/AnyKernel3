@@ -4,15 +4,15 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=FedShat kernel
+kernel.string=povidevKernel-ginkgo
 do.devicecheck=1
 do.modules=0
 do.cleanup=1
 do.cleanuponabort=0
-device.name1=platina
-device.name2=MI8Lite
-device.name3=mi8lite
-device.name4=8lite
+device.name1=ginkgo
+device.name2=
+device.name3=
+device.name4=
 device.name5=
 supported.versions=
 '; } # end properties
