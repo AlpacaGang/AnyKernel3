@@ -2,7 +2,7 @@ NAME ?= Alpaca
 
 DATE := $(shell date "+%Y%m%d-%H%M")
 
-VERSION := r10
+VERSION := r10.1
 
 ZIP := $(NAME)-$(VERSION)-$(DATE).zip
 
