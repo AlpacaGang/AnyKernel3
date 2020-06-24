@@ -35,10 +35,10 @@ ramdisk_compression=auto;
 set_perm_recursive 0 0 755 644 $ramdisk/*;
 set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
 
-repack_ramdisk;
-
 ## AnyKernel install
 dump_boot;
+
+repack_ramdisk;
 
 write_boot;
 ## end install
