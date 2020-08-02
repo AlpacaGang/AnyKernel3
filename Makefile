@@ -1,8 +1,8 @@
-NAME ?= Alpaca
+NAME ?= AlpacaKernel
 
 DATE := $(shell date "+%Y%m%d-%H%M")
 
-VERSION := r14
+VERSION := 15
 
 ZIP := $(NAME)-$(VERSION)-$(DATE).zip
 
