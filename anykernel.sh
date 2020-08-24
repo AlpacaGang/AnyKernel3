@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=|| Alpaca*Kernel by @kostyajrz ||
+kernel.string=AlpacaKernel by kostyajrz @ xda-developers
 do.devicecheck=1
 do.modules=1
 do.cleanup=1
