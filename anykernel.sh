@@ -4,16 +4,16 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=AlpacaKernel by kostyajrz @ xda-developers
+kernel.string=Clear SDM632 Kernel by kostyajrz @ telegram
 do.devicecheck=1
 do.modules=1
 do.cleanup=1
 do.cleanuponabort=0
 device.name1=onc
 device.name2=onclite
-device.name3=Redmi7
-device.name4=redmi7
-device.name5=XiaomiRedmi7
+device.name3=
+device.name4=
+device.name5=
 supported.versions=
 supported.patchlevels=
 '; } # end properties

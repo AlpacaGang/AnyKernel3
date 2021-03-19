@@ -1,4 +1,4 @@
-NAME ?= AlpacaKernel
+NAME ?= Clear Kernel
 
 DATE := $(shell date "+%Y%m%d-%H%M")
 
